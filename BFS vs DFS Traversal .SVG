@@ -1,0 +1,51 @@
+<svg width="400" height="280" viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .node { fill: #3b82f6; stroke: #fff; stroke-width: 2; }
+    .label { fill: #ffffff; font-family: sans-serif; font-size: 14px; text-anchor: middle; dominant-baseline: central; }
+    .edge { stroke: #9ca3af; stroke-width: 2; }
+    .bfs-order { fill: #10b981; font-weight: bold; font-size: 12px; }
+    .dfs-order { fill: #f59e0b; font-weight: bold; font-size: 12px; }
+  </style>
+
+  <!-- Nodes (Positions) -->
+  <circle class="node" cx="200" cy="30" r="20" id="N1" />
+  <text class="label" x="200" y="30">A</text>
+
+  <circle class="node" cx="100" cy="120" r="20" id="N2" />
+  <text class="label" x="100" y="120">B</text>
+  <circle class="node" cx="300" cy="120" r="20" id="N3" />
+  <text class="label" x="300" y="120">C</text>
+
+  <circle class="node" cx="50" cy="210" r="20" id="N4" />
+  <text class="label" x="50" y="210">D</text>
+  <circle class="node" cx="150" cy="210" r="20" id="N5" />
+  <text class="label" x="150" y="210">E</text>
+  <circle class="node" cx="250" cy="210" r="20" id="N6" />
+  <text class="label" x="250" y="210">F</text>
+
+  <!-- Edges -->
+  <line class="edge" x1="200" y1="50" x2="100" y2="100" />
+  <line class="edge" x1="200" y1="50" x2="300" y2="100" />
+  <line class="edge" x1="100" y1="140" x2="50" y2="190" />
+  <line class="edge" x1="100" y1="140" x2="150" y2="190" />
+  <line class="edge" x1="300" y1="140" x2="250" y2="190" />
+
+  <!-- Traversal Order Labels -->
+  <!-- BFS (Green, Level by Level): A(1), B(2), C(3), D(4), E(5), F(6) -->
+  <text class="bfs-order" x="225" y="45">(BFS: 1)</text>
+  <text class="bfs-order" x="75" y="135">(BFS: 2)</text>
+  <text class="bfs-order" x="325" y="135">(BFS: 3)</text>
+  <text class="bfs-order" x="25" y="225">(BFS: 4)</text>
+  <text class="bfs-order" x="125" y="225">(BFS: 5)</text>
+  <text class="bfs-order" x="225" y="225">(BFS: 6)</text>
+
+  <!-- DFS (Orange, Depth First): A(1), B(2), D(3), E(4), C(5), F(6) -->
+  <text class="dfs-order" x="175" y="45">(DFS: 1)</text>
+  <text class="dfs-order" x="75" y="105">(DFS: 2)</text>
+  <text class="dfs-order" x="25" y="195">(DFS: 3)</text>
+  <text class="dfs-order" x="125" y="195">(DFS: 4)</text>
+  <text class="dfs-order" x="325" y="105">(DFS: 5)</text>
+  <text class="dfs-order" x="225" y="195">(DFS: 6)</text>
+
+  <text x="200" y="270" class="label" fill="#374151" font-size="16px">Traversal Paths: BFS (Green) vs. DFS (Orange)</text>
+</svg>
